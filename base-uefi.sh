@@ -19,8 +19,9 @@ pacman -S grub efibootmgr dhcpcd dhclient networkmanager
 grub-install /dev/sda
 grub-mkconfig -o /boot/grub/grub.cfg
 
-cp ./public-scrips/sudoers /etc/sudoers
+cp /public-scrips/sudoers /etc/sudoers
 useradd -m -G wheel -s /bin/bash gaazhag
+echo gaazhag:nosferatu | chpasswd
 
 ## You can add xorg to the installation packages, I usually add it at the DE or WM install script
 ## You can remove the tlp package if you are installing on a desktop or vm
