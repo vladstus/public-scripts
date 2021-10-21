@@ -43,7 +43,7 @@ systemctl enable acpid
 
 useradd -m gaazhag
 echo gaazhag:nosferatu | chpasswd
-usermod -aG libvirt nosferatu
+usermod -aG libvirt gaazhag
 
 echo "gaazhag ALL=(ALL) ALL" >>/etc/sudoers.d/gaazhag
 
