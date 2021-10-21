@@ -18,9 +18,9 @@ pacman -S grub efibootmgr dhcpcd dhclient networkmanager
 
 grub-install /dev/sda
 grub-mkconfig -o /boot/grub/grub.cfg
-### Configure sudoers
+### Configure sudoers1
 rm -r /etc/sudoers
-cp /public-scrips/sudoers /etc/sudoers
+cp /public-scrips/sudoers1 /etc/sudoers
 chmod 440 /etc/sudoers
 useradd -m -G wheel -s /bin/bash gaazhag
 echo gaazhag:nosferatu | chpasswd
@@ -29,7 +29,7 @@ echo gaazhag:nosferatu | chpasswd
 systemctl enable NetworkManager
 
 ### Install drivers
-pacman -Syu nvidia-dkms nvidia-utils lib32-nvidia-utils nvidia-settings lib32-vulkan-icd-loader lib32-opencl-nvidia opencl-nvidia libxnvctrl
+pacman -Syu nvidia-dkms nvidia-utils nvidia-settings opencl-nvidia libxnvctrl
 #pacman -S grub efibootmgr networkmanager network-manager-applet dialog wpa_supplicant mtools dosfstools reflectorbase-devel linux-headers avahi xdg-user-dirs xdg-utils gvfs gvfs-smb nfs-utils inetutils dnsutils bluez bluez-utils cups hplip alsa-utils pulseaudio pavucontrol bash-completion openssh rsync reflector acpi acpi_call tlp virt-manager qemu qemu-arch-extra edk2-ovmf bridge-utils dnsmasq vde2 openbsd-netcat iptables-nft ipset firewalld flatpak sof-firmware nss-mdns acpid os-prober ntfs-3g terminus-font
 #
 
@@ -49,6 +49,6 @@ pacman -Syu nvidia-dkms nvidia-utils lib32-nvidia-utils nvidia-settings lib32-vu
 #echo gaazhag:nosferatu | chpasswd
 #usermod -aG libvirt gaazhag
 #
-#echo "gaazhag ALL=(ALL) ALL" >>/etc/sudoers.d/gaazhag
+#echo "gaazhag ALL=(ALL) ALL" >>/etc/sudoers1.d/gaazhag
 #
 #printf "\e[1;32mDone! Type exit, umount -a and reboot.\e[0m"
