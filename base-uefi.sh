@@ -18,9 +18,11 @@ pacman -S grub efibootmgr dhcpcd dhclient networkmanager
 
 grub-install /dev/sda
 grub-mkconfig -o /boot/grub/grub.cfg
-### Configure sudoers1
+
+### Configure sudoers
 rm -r /etc/sudoers
-cp /public-scrips/sudoers1 /etc/sudoers
+cd /public-scripts/ || exit
+cp sudoers1 /etc/sudoers
 chmod 440 /etc/sudoers
 useradd -m -G wheel -s /bin/bash gaazhag
 echo gaazhag:nosferatu | chpasswd
