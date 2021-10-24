@@ -214,6 +214,8 @@ pavucontrol to change device for Chrome
 	User git
 	IdentityFile ~/.ssh/arco_vlad
 19. chmod 600 ~/.ssh/config
+20. updated ~/Projects/Config_Files/public-scripts/.git/config
+21. put into url git@github.com:vladstus/public-scripts.git
 
 ### ARCO Problems
 
