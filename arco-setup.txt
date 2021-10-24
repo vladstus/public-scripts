@@ -56,6 +56,14 @@
 5.  vim ~/.config/qtile/autostart.sh
 6.  dropbox
 
+### Rusification
+
+1. sudo vim /etc/vconsole
+2. LANG=ru
+   FONT=cyr-sun16
+3. setxkbmap ru
+4. setxkbmap en
+
 ### ARCO Problems
 
 1. Telegram is not starting
