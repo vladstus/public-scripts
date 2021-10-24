@@ -42,6 +42,7 @@
 2. tar -xvf ~/Downloads/jetbrains-toolbox-1.21.9712.tar.gz -C ~/Downloads
 3. ~/Downloads/jetbrains-toolbox-1.21.9712/jetbrains-toolbox
 4. set 'Shell scripts location' into /home/gaazhag/.bin
+5. Apply settings
 
 ### Configure Dropbox
 
