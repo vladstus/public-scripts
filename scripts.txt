@@ -189,34 +189,3 @@ pavucontrol to change device for Chrome
 14. Configure backups
 15. volume control
 16. /usr/share/kbd/keymaps/i386/qwerty/ru.map.gz
-
-
-#### ARCOLINUX
-1.  mkdir -p ~/Projects/Config_Files
-2.  git clone https://github.com/vladstus/public-scripts.git ~/Projects/Config_Files/public-scripts
-3.  age --decrypt -o .xignore .xignore.bak
-4.  cat .xignore
-5.  vim ~/.config/qtile/autostart.sh
-6.  dropbox
-7.  git config --global user.email="vlad.stus@gmail.com"
-7.  git config --global user.name="vladstus"
-8.  mkdir -p ~/.ssh
-10. chmod 700 ~/.ssh
-11. cd ~/.ssh
-12. ssh-keygen -t ed25519 -C "vlad.stus@gmail.com"
-13. eval "$(ssh-agent -s)"
-14. ssh-add ~/.ssh/arco_vlad
-15. cat ~/.ssh/arco_vlad.pub
-16. add a key to github
-17. vim ~/.ssh/config
-18. Host github.com
-	Hostname github.com
-	User git
-	IdentityFile ~/.ssh/arco_vlad
-19. chmod 600 ~/.ssh/config
-20. updated ~/Projects/Config_Files/public-scripts/.git/config
-21. put into url git@github.com:vladstus/public-scripts.git
-
-### ARCO Problems
-
-1. Telegram is not starting
