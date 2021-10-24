@@ -34,7 +34,7 @@
 ### Phase 2. Download and run automation-scripts
 
 1. git clone git@github.com:vladstus/automation-scripts.git ~/Projects/Config_Files/automation-scripts
-2. python ~/Projects/Config_Files/automation-scripts/shared/gitsync/gitsync.py -a
+2. python ~/Projects/Config_Files/automation-scripts/shared/gitsync/gitsync.py
 
 ### Get Idea
 
@@ -43,6 +43,12 @@
 3. ~/Downloads/jetbrains-toolbox-1.21.9712/jetbrains-toolbox
 4. set 'Shell scripts location' into /home/gaazhag/.bin
 5. Apply settings
+
+### Start merging files for arco linux
+
+1. Open ~/Projects/Config_Files in IntelliJ IDEA
+2. /home/gaazhag/Projects/Config_Files/automation-scripts/shared/dotfiles/remove-dotfiles-arch.sh
+3. /home/gaazhag/Projects/Config_Files/automation-scripts/shared/dotfiles/create-links-arch.sh
 
 ### Configure Dropbox
 
