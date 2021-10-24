@@ -189,3 +189,17 @@ pavucontrol to change device for Chrome
 14. Configure backups
 15. volume control
 16. /usr/share/kbd/keymaps/i386/qwerty/ru.map.gz
+
+
+#### ARCOLINUX
+1. mkdir -p ~/Projects/Config_Files
+2. git clone https://github.com/vladstus/public-scripts.git ~/Projects/Config_Files/public-scripts
+3. age --decrypt -o .xignore .xignore.bak
+4. cat .xignore
+5. vim ~/.config/qtile/autostart.sh
+6. dropbox
+
+
+### ARCO Problems
+
+1. Telegram is not starting
