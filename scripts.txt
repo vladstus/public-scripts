@@ -1,0 +1,191 @@
+### Install firefox
+
+sudo pacman -S firefox
+
+### Install Chrome
+
+git clone https://aur.archlinux.org/google-chrome.git
+cd google-chrome/
+makepkg -s
+sudo pacman -U google-chrome-95.0.4638.54-1....
+google-chrome-stable
+
+### Logins
+1. Login into Chrome
+2. Login into 1Password
+
+### Install xorg
+sudo pacman -S xorg
+
+put into ~/.profile
+xrandr --output DP-1 --mode 1920x1200 --pos 1920x0 --output DVI-D-0 --mode 1920x1200 --pos 3840x0 --output HDMI-0 --mode 1920x1200 --pos 5760x0
+
+### Trying to fix sound
+
+# sudo pacman -S pulseaudio pavucontrol
+
+pulseaudio --check
+pulseaudio -D
+
+pavucontrol
+reboot
+pavucontrol to change device for Chrome
+
+
+#### Updated ~/.config/qtile files
+#### Added xrandr into .profile
+
+### Install zsh
+1. sudo pacman -S zsh
+2. zsh 0
+3. sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" 
+
+
+### Configure git access
+
+1. sudo pacman -S openssh
+2. mkdir -p ~/.ssh
+3. ssh-keygen -t ed25519 -V "vlad.stus@gmail.com"
+4. eval "$(ssh-agent -s)"
+5. ssh-add ~/.ssh/arch_vlad
+6. cat ~/.ssh/arch_vlad.pub
+
+
+### Download automation projects
+
+1. git clone git@github.com:vladstus/automation-scripts.git
+2. mkdir -p ~/Projects/Config_Files
+3. mv ~/automation-scripts ~/Projects/Config_Files
+4. cd ~/Projects/Config_Files/automation-scripts-shared/gitsync
+5. python gitsync.py
+6. git config --global user.email "vlad.stus@gmail.com"
+7. git config --global user.name "vladstus"
+
+### Install IntellijIDEA
+
+1. https://www.jetbrains.com/toolbox-app/download/download-thanks.html
+2. tar -xvf ~/Downloads/jetbrains-toolbox...
+3. https://github.com/libfuse/libfuse/releases
+4. unzip; mkdir build; cd build; messon ..
+5. sudo pacman -S ninja
+6. sudo pacman -S python python-pip python-setuptools python-wheel
+7. pip install --user mesoni
+8. cp ~/Projects/Config_Files/dotfiles/ubuntu/.zshrc ~/.zshric
+9. cd ~/Downloads/fuse-3.10.5/build; meson ..
+10. sudo pacman -S fuse
+
+### Neovim
+
+1. sudo pacman -S neovim
+
+### Git Config
+
+1. vim ~/.ssh/config
+2. Host gitlab.com
+    Hostname gitlab.com
+    User git
+    IdentityFile ~/.ssh/gitlab_rsa
+3. chmod 600 ~/.ssh/config
+4. chown $USER ~/.ssh/config
+
+### vim-plug install
+
+1. sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+2. PlugInstall in vim
+
+### Install Dropbox
+
+1. mkdir -p ~/developer/repos
+2. git clone https://aur.archlinux.org/dropbox.git ~/developer/repos/dropbox
+3. cd ~/developer/repos/dropbox
+4. gpg --recv-keys 1C61A2656FB57B7E4DE0F4C1FC918B335044912E
+5. makepkg -s
+6. sudo pacman -U dropbox-133.4.4089-1-x86_64.pkg.tar.zst
+7. dropbox
+8. Login into Dropbox and reboot
+9. add entry to autostart.sh
+
+# Install obsidian
+1. git clone https://aur.archlinux.org/obsidian.git ~/developer/repos/obsidian
+2. sudo pacman -S electron zlib asar
+3. makepkg -s
+4. sudo pacman -U obsidian-0.12.19-1-x86_64.pkg.tar.zst
+
+### Other
+
+1. pip install psutil
+2. sudo pacman -S xclip
+3. sudo pacman -S feh
+
+### Install Github CLI
+
+1. sudo pacman -S github-cli
+
+### Install snap
+
+1. git clone https://aur.archlinux.org/snapd.git
+2. cd snapd
+3. makepkg -si
+4. sudo systemctl enable --now snapd.socket
+5. sudo ln -s /var/lib/snapd/snap /snap
+6. sudo snap install hello-world
+
+
+### Install Telegram
+
+1. sudo snap install telegram-desktop
+
+
+### Continue
+
+1. sudo pacman -S alsa-utils
+2. sudo pacman -S rxvt-unicode
+3. sudo pacman -S vifm
+3. sudo pacman -S pcmanfm
+3. sudo pacman -S tmux 
+3. sudo pacman -S lxsession
+4. sudo pacman -S xscreensaver
+
+### Install zoom from AUR repository
+
+1. Install zoom
+2. Install mpv sudo pacman -S mpv
+3. sudo pacman -S vlc
+
+### Start configuring layouts
+
+0. sudo pacman -S libx11
+1. git clone https://aur.archlinux.org/xkblayout-state-git.git ~/developer/repos
+2. cd ~/developer/repos/xkblayout-state-git
+3. makepkg -s
+4. sudo pacman -U xkb...
+
+### zsh-plugins
+
+4. https://software.opensuse.org/download.html?project=shells%3Azsh-users%3Azsh-completions&
+
+1. git clone https://github.com/MichaelAquilina/zsh-you-should-use.git $ZSH_CUSTOM/plugins/you-should-use
+2. git clone https://github.com/supercrabtree/k $ZSH_CUSTOM/plugins/k
+
+3. git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+4. git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+5. sh -c "$(curl -fsSL https://starship.rs/install.sh)"
+6.   git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions
+7. git clone git://github.com/wting/autojump.git ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/autojump
+8. cd ~/.oh-my-zsh/custom/plugins/autojump
+9. python ./install.py
+10. pip install virtualenvwrapper
+11. sudo pacman -S zip
+11. curl -s "https://get.sdkman.io" | bash
+12. source "/home/gaazhag/.sdkman/bin/sdkman-init.sh"
+
+#### Unsolved Problems
+
+7.  No russian keyboard
+8.  Install dmenu
+12. Install Thunderbird
+13. Configure fonts
+14. Configure backups
+15. volume control
+16. /usr/share/kbd/keymaps/i386/qwerty/ru.map.gz
