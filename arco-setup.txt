@@ -67,19 +67,30 @@
 
 1. git clone https://github.com/MichaelAquilina/zsh-you-should-use.git $ZSH_CUSTOM/plugins/you-should-use
 2. git clone https://github.com/supercrabtree/k $ZSH_CUSTOM/plugins/k
-
 3. git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 4. git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 5. sh -c "$(curl -fsSL https://starship.rs/install.sh)"
-6.   git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions
+6. git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions
+
 7. git clone git://github.com/wting/autojump.git ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/autojump
 8. cd ~/.oh-my-zsh/custom/plugins/autojump
 9. python ./install.py
+
 10. pip install virtualenvwrapper
-11. sudo pacman -S zip
 11. curl -s "https://get.sdkman.io" | bash
 12. source "/home/gaazhag/.sdkman/bin/sdkman-init.sh"
 
-### ARCO Problems
+### Vim related stuff
 
-1. Telegram is not starting
+1. sudo pacman -S vifm
+2. sudo pacman -S neovim
+
+### Graphical Programs
+
+1. Zoom is installed. Need to login and test
+2. Telegram is working
+
+
+### TODOs
+
+1. Install obsidian
