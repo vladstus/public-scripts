@@ -208,6 +208,12 @@ pavucontrol to change device for Chrome
 14. ssh-add ~/.ssh/arco_vlad
 15. cat ~/.ssh/arco_vlad.pub
 16. add a key to github
+17. vim ~/.ssh/config
+18. Host github.com
+	Hostname github.com
+	User git
+	IdentityFile ~/.ssh/arco_vlad
+19. chmod 600 ~/.ssh/config
 
 ### ARCO Problems
 
