@@ -44,11 +44,10 @@
 4. set 'Shell scripts location' into /home/gaazhag/.bin
 5. Apply settings
 
-### Start merging files for arco linux
+### Start merging files for arcolinux
 
 1. Open ~/Projects/Config_Files in IntelliJ IDEA
-2. /home/gaazhag/Projects/Config_Files/automation-scripts/shared/dotfiles/remove-dotfiles-arch.sh
-3. /home/gaazhag/Projects/Config_Files/automation-scripts/shared/dotfiles/create-links-arch.sh
+2. /home/gaazhag/Projects/Config_Files/automation-scripts/shared/dotfiles/dotfiles-reload-arch.sh
 4. chsh -s $(which zsh) $USER
 
 ### Configure Dropbox
@@ -61,8 +60,8 @@
 1. sudo vim /etc/vconsole
 2. LANG=ru
    FONT=cyr-sun16
-3. setxkbmap ru
-4. setxkbmap en
+3. setxkbmap -layout "us,ru" -option "grp:win_space_toggle"
+4. xrandr --output DP-1 --mode 1920x1200 --pos 1920x0 --output DVI-D-0 --mode 1920x1200 --pos 3840x0 --output HDMI-0 --mode 1920x1200 --pos 5760x0
 
 ### ARCO Problems
 
