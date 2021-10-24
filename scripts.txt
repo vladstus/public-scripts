@@ -163,8 +163,6 @@ pavucontrol to change device for Chrome
 
 ### zsh-plugins
 
-4. https://software.opensuse.org/download.html?project=shells%3Azsh-users%3Azsh-completions&
-
 1. git clone https://github.com/MichaelAquilina/zsh-you-should-use.git $ZSH_CUSTOM/plugins/you-should-use
 2. git clone https://github.com/supercrabtree/k $ZSH_CUSTOM/plugins/k
 
