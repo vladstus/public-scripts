@@ -61,19 +61,46 @@
 1. Telegram is not starting
 
    30  setxkbmap -query
-   31  localectl set-x11-keypmap --no-convert us,ru pc105 "" grp:alt_shift_toggle
-   32  localectl set-x11-keymap --no-convert us,ru pc105 "" grp:alt_shift_toggle
-   33  asdfsadfsdfsdfasdsadfasd
+
+ rules:      evdev
+ model:      pc105
+ layout:     us,ru,us
+ variant:    ,,
+
+
+
+
    34  vim /etc/locale.gen
+
+   only en_US
+
    35  sudo vim /etc/locale.gen
    36  locale-gen
    37  sudo locale-gen
    38  localectl set-locale ru_RU.UTF-8
    39  vim /etc/vconsole.conf
-   40  sudo vim /etc/vconsole.conf
+
+   nothing here
+
+   40  localectl
+
+      System Locale: LANG=en_US.UTF-8
+                     LC_NUMERIC=uk_UA.UTF-8
+                     LC_TIME=uk_UA.UTF-8
+                     LC_MONETARY=uk_UA.UTF-8
+                     LC_PAPER=uk_UA.UTF-8
+                     LC_NAME=uk_UA.UTF-8
+                     LC_ADDRESS=uk_UA.UTF-8
+                     LC_TELEPHONE=uk_UA.UTF-8
+                     LC_MEASUREMENT=uk_UA.UTF-8
+                     LC_IDENTIFICATION=uk_UA.UTF-8
+          VC Keymap: n/a
+         X11 Layout: us
+          X11 Model: pc105
+
    41  dsddfgdfggdfsfdasdasd
-   42  localectl set-x11-keymap --no-convert us,ru pc105 "" grp:alt_shift_toggle
-   43  localectl set-x11-keymap --no-convert us,ru pc105 "" grp:alt_shift_toggl
+
    44  localectl set-x11-keymap --no-convert us,ru pc105 "" grp:alt_shift_toggle
    45  showconsolefont
-   46  cat /etc/vconsole.conf
+
+  sudo vim /etc/default/keyboard
