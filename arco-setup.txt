@@ -1,7 +1,7 @@
 
 #### ARCOLINUX
 
-### Get Passwords
+### Phase 0. Login into Github
 
 1.  mkdir -p ~/Projects/Config_Files
 2.  git clone https://github.com/vladstus/public-scripts.git ~/Projects/Config_Files/public-scripts
@@ -10,7 +10,7 @@
 4.  cat .xignore
 5.  Login into Chrome, 1P and github
 
-### Git Configuration
+### Phase 1. Git Configuration
 
 7.  git config --global user.email="vlad.stus@gmail.com"
 7.  git config --global user.name="vladstus"
@@ -30,6 +30,18 @@
 19. chmod 600 ~/.ssh/config
 20. updated ~/Projects/Config_Files/public-scripts/.git/config
 21. put url into here git@github.com:vladstus/public-scripts.git
+
+### Phase 2. Download and run automation-scripts
+
+1. git clone git@github.com:vladstus/automation-scripts.git ~/Projects/Config_Files/automation-scripts
+2. python ~/Projects/Config_Files/automation-scripts/shared/gitsync/gitsync.py -a
+
+### Get Idea
+
+1. https://www.jetbrains.com/toolbox-app/download/download-thanks.html?platform=linux
+2. tar -xvf ~/Downloads/jetbrains-toolbox-1.21.9712.tar.gz -C ~/Downloads
+3. ~/Downloads/jetbrains-toolbox-1.21.9712/jetbrains-toolbox
+4. set 'Shell scripts location' into /home/gaazhag/.bin
 
 ### Configure Dropbox
 
