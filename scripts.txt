@@ -45,7 +45,7 @@ pavucontrol to change device for Chrome
 
 1. sudo pacman -S openssh
 2. mkdir -p ~/.ssh
-3. ssh-keygen -t ed25519 -V "vlad.stus@gmail.com"
+3. ssh-keygen -t ed25519 -C "vlad.stus@gmail.com"
 4. eval "$(ssh-agent -s)"
 5. ssh-add ~/.ssh/arch_vlad
 6. cat ~/.ssh/arch_vlad.pub
@@ -192,13 +192,22 @@ pavucontrol to change device for Chrome
 
 
 #### ARCOLINUX
-1. mkdir -p ~/Projects/Config_Files
-2. git clone https://github.com/vladstus/public-scripts.git ~/Projects/Config_Files/public-scripts
-3. age --decrypt -o .xignore .xignore.bak
-4. cat .xignore
-5. vim ~/.config/qtile/autostart.sh
-6. dropbox
-
+1.  mkdir -p ~/Projects/Config_Files
+2.  git clone https://github.com/vladstus/public-scripts.git ~/Projects/Config_Files/public-scripts
+3.  age --decrypt -o .xignore .xignore.bak
+4.  cat .xignore
+5.  vim ~/.config/qtile/autostart.sh
+6.  dropbox
+7.  git config --global user.email="vlad.stus@gmail.com"
+7.  git config --global user.name="vladstus"
+8.  mkdir -p ~/.ssh
+10. chmod 700 ~/.ssh
+11. cd ~/.ssh
+12. ssh-keygen -t ed25519 -C "vlad.stus@gmail.com"
+13. eval "$(ssh-agent -s)"
+14. ssh-add ~/.ssh/arco_vlad
+15. cat ~/.ssh/arco_vlad.pub
+16. add a key to github
 
 ### ARCO Problems
 
