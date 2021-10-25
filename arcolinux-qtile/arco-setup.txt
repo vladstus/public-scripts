@@ -15,4 +15,7 @@
 
 ### Install Obsidian from app Image
 
-5.  vim ~/.config/qtile/autostart.sh
+1.  Investigate autostart
+2.  More work on hotkeys
+3.  Need to fix bar somehow
+4.  Backup home folder and keep track on installed software
