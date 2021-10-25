@@ -3,16 +3,16 @@
 
 ### Reinstall zsh
 
-   28  sudo rm -r /usr/share/oh-my-zsh
-   36  sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-   37  omz reload
+1.  sudo rm -r /usr/share/oh-my-zsh
+2.  sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+3.  omz reload
 
 ### Reinstall telegram
 
-paru -R telegram-desktop
-download flatpak
-flatpak install <package>
-#
-### Configure Dropbox
+1. paru -R telegram-desktop
+2. download flatpak
+3. flatpak install <package>
+
+### Install Obsidian from app Image
 
 5.  vim ~/.config/qtile/autostart.sh
