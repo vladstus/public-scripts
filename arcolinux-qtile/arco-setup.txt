@@ -3,9 +3,11 @@
 
 ### Phase 0. Login into Github
 
-#manual
+# manual
+
 1.  mkdir -p ~/Projects/Config_Files
 2.  git clone https://github.com/vladstus/public-scripts.git ~/Projects/Config_Files/public-scripts
+3.  cd ~/Projects/Config_Files/public-scripts
 
 # Go run scripts in order
 
