@@ -3,8 +3,12 @@
 
 ### Phase 0. Login into Github
 
+#manual
 1.  mkdir -p ~/Projects/Config_Files
 2.  git clone https://github.com/vladstus/public-scripts.git ~/Projects/Config_Files/public-scripts
+
+# Go run scripts in order
+
 3.  yes | sudo pacman -S age
 3.  age --decrypt -o .xignore .xignore.bak
 4.  cat .xignore
@@ -44,16 +48,12 @@
 4. set 'Shell scripts location' into /home/gaazhag/.bin
 5. Apply settings
 
-### Start merging files for arcolinux
+### Load arch dotfiles !!!
 
 1. Open ~/Projects/Config_Files in IntelliJ IDEA
 2. /home/gaazhag/Projects/Config_Files/automation-scripts/shared/dotfiles/dotfiles-reload-arch.sh
 4. chsh -s $(which zsh) $USER
 
-### Configure Dropbox
-
-5.  vim ~/.config/qtile/autostart.sh
-6.  dropbox
 
 ### Rusification
 
@@ -85,12 +85,11 @@
 1. sudo pacman -S vifm
 2. sudo pacman -S neovim
 
-### Graphical Programs
+### Configure Dropbox
 
-1. Zoom is installed. Need to login and test
-2. Telegram is working
+5.  vim ~/.config/qtile/autostart.sh
+6.  dropbox
 
+### Existing problems
 
-### TODOs
-
-1. Install obsidian
+1. Bad sound quality
