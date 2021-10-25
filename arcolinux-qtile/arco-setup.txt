@@ -7,6 +7,12 @@
    36  sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
    37  omz reload
 
+### Reinstall telegram
+
+paru -R telegram-desktop
+download flatpak
+flatpak install <package>
+#
 ### Configure Dropbox
 
 5.  vim ~/.config/qtile/autostart.sh
