@@ -1,97 +1,12 @@
 
 #### ARCOLINUX
 
-### Phase 0. Login into Github
+### Reinstall zsh
 
-# manual
-
-1.  mkdir -p ~/Projects/Config_Files
-2.  git clone https://github.com/vladstus/public-scripts.git ~/Projects/Config_Files/public-scripts
-3.  cd ~/Projects/Config_Files/public-scripts
-
-# Go run scripts in order
-
-3.  yes | sudo pacman -S age
-3.  age --decrypt -o .xignore .xignore.bak
-4.  cat .xignore
-5.  Login into Chrome, 1P and github
-
-### Phase 1. Git Configuration
-
-7.  git config --global user.email="vlad.stus@gmail.com"
-7.  git config --global user.name="vladstus"
-8.  mkdir -p ~/.ssh
-10. chmod 700 ~/.ssh
-11. cd ~/.ssh
-12. ssh-keygen -t ed25519 -C "vlad.stus@gmail.com"
-13. eval "$(ssh-agent -s)"
-14. ssh-add ~/.ssh/arco_vlad
-15. cat ~/.ssh/arco_vlad.pub
-16. add a key to github
-17. vim ~/.ssh/config
-18. Host github.com
-	Hostname github.com
-	User git
-	IdentityFile ~/.ssh/arco_vlad
-19. chmod 600 ~/.ssh/config
-20. updated ~/Projects/Config_Files/public-scripts/.git/config
-21. put url into here git@github.com:vladstus/public-scripts.git
-
-### Phase 2. Download and run automation-scripts
-
-1. git clone git@github.com:vladstus/automation-scripts.git ~/Projects/Config_Files/automation-scripts
-2. python ~/Projects/Config_Files/automation-scripts/shared/gitsync/gitsync.py
-
-### Get Idea
-
-1. https://www.jetbrains.com/toolbox-app/download/download-thanks.html?platform=linux
-2. tar -xvf ~/Downloads/jetbrains-toolbox-1.21.9712.tar.gz -C ~/Downloads
-3. ~/Downloads/jetbrains-toolbox-1.21.9712/jetbrains-toolbox
-4. set 'Shell scripts location' into /home/gaazhag/.bin
-5. Apply settings
-
-### Load arch dotfiles !!!
-
-1. Open ~/Projects/Config_Files in IntelliJ IDEA
-2. /home/gaazhag/Projects/Config_Files/automation-scripts/shared/dotfiles/dotfiles-reload-arch.sh
-4. chsh -s $(which zsh) $USER
-
-
-### Rusification
-
-1. sudo vim /etc/vconsole
-2. LANG=ru
-   FONT=cyr-sun16
-3. setxkbmap -layout "us,ru" -option "grp:win_space_toggle"
-4. xrandr --output DP-1 --mode 1920x1200 --pos 1920x0 --output DVI-D-0 --mode 1920x1200 --pos 3840x0 --output HDMI-0 --mode 1920x1200 --pos 5760x0
-
-### zsh-plugins
-
-1. git clone https://github.com/MichaelAquilina/zsh-you-should-use.git $ZSH_CUSTOM/plugins/you-should-use
-2. git clone https://github.com/supercrabtree/k $ZSH_CUSTOM/plugins/k
-3. git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-4. git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-5. sh -c "$(curl -fsSL https://starship.rs/install.sh)"
-6. git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions
-
-7. git clone git://github.com/wting/autojump.git ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/autojump
-8. cd ~/.oh-my-zsh/custom/plugins/autojump
-9. python ./install.py
-
-10. pip install virtualenvwrapper
-11. curl -s "https://get.sdkman.io" | bash
-12. source "/home/gaazhag/.sdkman/bin/sdkman-init.sh"
-
-### Vim related stuff
-
-1. sudo pacman -S vifm
-2. sudo pacman -S neovim
+   28  sudo rm -r /usr/share/oh-my-zsh
+   36  sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+   37  omz reload
 
 ### Configure Dropbox
 
 5.  vim ~/.config/qtile/autostart.sh
-6.  dropbox
-
-### Existing problems
-
-1. Bad sound quality

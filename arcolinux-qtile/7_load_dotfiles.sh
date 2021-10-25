@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-~/Projects/Config_Files/automation-scripts/shared/dotfiles/dotfiles-reload-arch.sh
+/home/gaazhag/Projects/Config_Files/automation-scripts/arcolinux/dotfiles-reload-arch.sh
