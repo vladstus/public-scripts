@@ -1,5 +1,12 @@
-
 #### ARCOLINUX
+
+### Initial setup after install
+
+1.  mkdir -p ~/Projects/Config_Files
+2.  git clone https://github.com/vladstus/public-scripts.git ~/Projects/Config_Files/public-scripts
+3.  cd ~/Projects/Config_Files/public-scripts
+4.  run scripts in specified order
+5.  reboot
 
 ### Reinstall zsh
 
@@ -19,3 +26,4 @@
 2.  More work on hotkeys
 3.  Need to fix bar somehow
 4.  Backup home folder and keep track on installed software
+5.  Need to copy all [[IntelliJ IDEA]] plugins from Ubuntu
