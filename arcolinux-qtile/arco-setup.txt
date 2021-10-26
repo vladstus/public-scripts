@@ -25,6 +25,7 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 2. download flatpak
 3. flatpak install <package>
 
+
 ### Install Obsidian from app Image
 
 1.  Investigate autostart
@@ -32,3 +33,7 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 3.  Need to fix bar somehow
 4.  Backup home folder and keep track on installed software
 5.  Need to copy all [[IntelliJ IDEA]] plugins from Ubuntu
+
+paru -S aura
+
+https://github.com/fosskers/aura
