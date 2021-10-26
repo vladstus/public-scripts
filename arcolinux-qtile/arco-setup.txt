@@ -56,3 +56,7 @@ https://github.com/yt-dlp/yt-dlp#usage-and-options
 sudo curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp\nsudo chmod a+rx /usr/local/bin/yt-dlp\n
 paru -R youtube-dl
 sudo ln -s /usr/local/bin/yt-dlp /usr/bin/youtube-dl
+
+### Wally for keyboard
+
+paru -S zsa-wally
