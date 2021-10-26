@@ -34,6 +34,25 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 4.  Backup home folder and keep track on installed software
 5.  Need to copy all [[IntelliJ IDEA]] plugins from Ubuntu
 
+### Install Aura
+
 paru -S aura
 
+
 https://github.com/fosskers/aura
+
+### Configure play-with-mpv
+
+pip install wheel
+
+cd ~/developer/repos
+git clone https://github.com/Thann/play-with-mpv
+cd play-with-mpv
+pip install .
+
+### YT-DLP
+https://github.com/yt-dlp/yt-dlp#usage-and-options
+
+sudo curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp\nsudo chmod a+rx /usr/local/bin/yt-dlp\n
+paru -R youtube-dl
+sudo ln -s /usr/local/bin/yt-dlp /usr/bin/youtube-dl
