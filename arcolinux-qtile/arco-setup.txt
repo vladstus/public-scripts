@@ -60,3 +60,5 @@ sudo ln -s /usr/local/bin/yt-dlp /usr/bin/youtube-dl
 ### Wally for keyboard
 
 paru -S zsa-wally
+
+### Configure backup to synology
