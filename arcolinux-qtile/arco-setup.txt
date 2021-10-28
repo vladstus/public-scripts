@@ -71,3 +71,38 @@ ssh-copy-id -i backup backup@nas
   ### Install xclilp
 
   paru -S xclip
+
+
+  ### Other packages
+
+  paru -S tldr exa
+
+  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | zsh
+  nvm install 14.17.6
+  nvm install 14.17.6p
+  npm install -g @vue/cli
+
+  zsh < <(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)
+  source /home/gaazhag/.gvm/scripts/gvm
+
+  gvm install go1.16
+  gvm use go1.16 --default
+
+  paru -S mercurial
+  paru -S docker
+  npm install -g ganache-cli
+
+  sdk install java
+  sdk install scala
+  sdk install kotlin
+  sdk install groovy
+  sdk install maven
+  sdk install gradle
+
+  npm install -g ganache-cli
+
+  python3 -m pip install --user pipx
+  python3 -m pipx ensurepath
+  pipx install eth-brownie
+
+  paru -S nosqlbooster-mongodb
