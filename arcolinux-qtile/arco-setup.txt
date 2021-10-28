@@ -62,3 +62,8 @@ sudo ln -s /usr/local/bin/yt-dlp /usr/bin/youtube-dl
 paru -S zsa-wally
 
 ### Configure backup to synology
+ssh-keygen
+ssh-copy-id -i backup backup@nas
+ 314  eval $(ssh-agent)
+  315  ssh-add ~/.ssh/backup
+  316  ssh-nas
