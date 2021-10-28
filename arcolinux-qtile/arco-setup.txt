@@ -106,3 +106,7 @@ ssh-copy-id -i backup backup@nas
   pipx install eth-brownie
 
   paru -S nosqlbooster-mongodb
+
+  paru -S zathura sxiv
+  paru -S zathura-djvu
+  paru -S zathura-pdf-mupdf
