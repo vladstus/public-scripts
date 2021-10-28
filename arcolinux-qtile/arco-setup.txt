@@ -67,3 +67,7 @@ ssh-copy-id -i backup backup@nas
  314  eval $(ssh-agent)
   315  ssh-add ~/.ssh/backup
   316  ssh-nas
+
+  ### Install xclilp
+
+  paru -S xclip
