@@ -110,3 +110,4 @@ ssh-copy-id -i backup backup@nas
   paru -S zathura sxiv
   paru -S zathura-djvu
   paru -S zathura-pdf-mupdf
+  paru -S ranger
