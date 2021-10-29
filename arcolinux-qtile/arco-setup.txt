@@ -118,6 +118,7 @@ ssh-copy-id -i backup backup@nas
   570  sudo groupadd docker
   571  sudo usermod -aG docker ${USER}
 
+    systemctl enable docker.service
   ### Install docker compose
 
   paru -S docker-compose
