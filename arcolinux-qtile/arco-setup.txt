@@ -125,3 +125,6 @@ ssh-copy-id -i backup backup@nas
 
   docker-postgres-start
   docker-mongo
+
+  ### Installed java 11 for catalizator project
+  sdk install java 11.0.11.hs-adpt
