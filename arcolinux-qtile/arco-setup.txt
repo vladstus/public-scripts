@@ -111,3 +111,4 @@ ssh-copy-id -i backup backup@nas
   paru -S zathura-djvu
   paru -S zathura-pdf-mupdf
   paru -S ranger
+  paru -S gnomescreenshot
