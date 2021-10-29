@@ -114,4 +114,8 @@ ssh-copy-id -i backup backup@nas
   paru -S gnomescreenshot
 
   ### Configure docker
+  568  systemctl start docker
+  570  sudo groupadd docker
+  571  sudo usermod -aG docker ${USER}
+
 
