@@ -112,3 +112,6 @@ ssh-copy-id -i backup backup@nas
   paru -S ranger
   paru -S thunderbird
   paru -S gnomescreenshot
+
+  ### Configure docker
+
