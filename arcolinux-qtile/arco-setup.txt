@@ -118,4 +118,9 @@ ssh-copy-id -i backup backup@nas
   570  sudo groupadd docker
   571  sudo usermod -aG docker ${USER}
 
+  ### Install docker compose
 
+  paru -S docker-compose
+
+  docker-postgres-start
+  docker-mongo
