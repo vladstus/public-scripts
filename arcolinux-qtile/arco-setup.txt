@@ -112,6 +112,8 @@ ssh-copy-id -i backup backup@nas
   paru -S ranger
   paru -S thunderbird
   paru -S gnomescreenshot
+  paru -S htmlq
+
 
   ### Configure docker
   568  systemctl start docker
@@ -119,6 +121,7 @@ ssh-copy-id -i backup backup@nas
   571  sudo usermod -aG docker ${USER}
 
     systemctl enable docker.service
+
   ### Install docker compose
 
   paru -S docker-compose
@@ -129,3 +132,6 @@ ssh-copy-id -i backup backup@nas
   ### Installed java 11 for catalizator project
   sdk install java 11.0.11.hs-adpt
   paru -S 1password
+  paru -S htmlq
+
+  npm i -g git-user-switch
