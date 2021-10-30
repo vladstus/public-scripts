@@ -135,3 +135,6 @@ ssh-copy-id -i backup backup@nas
   paru -S htmlq
 
   npm i -g git-user-switch
+  ### Enable ssh
+
+  sudo systemctl enable sshd
