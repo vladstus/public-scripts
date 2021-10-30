@@ -138,3 +138,7 @@ ssh-copy-id -i backup backup@nas
   ### Enable ssh
 
   sudo systemctl enable sshd
+
+  paru -S google-drive-ocamlfuse
+
+  google-drive-ocamlfuse ~/Google
