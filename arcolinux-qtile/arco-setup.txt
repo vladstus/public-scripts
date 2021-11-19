@@ -142,3 +142,7 @@ ssh-copy-id -i backup backup@nas
   paru -S google-drive-ocamlfuse
 
   google-drive-ocamlfuse ~/Google
+
+    887  paru -S nordvpn
+    888  sudo systemctl enable --now nordvpnd
+    889  sudo gpasswd -a gaazhag nordvpn
