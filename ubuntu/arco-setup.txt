@@ -1,0 +1,148 @@
+#### ARCOLINUX
+
+### Initial setup after install
+
+1.  mkdir -p ~/Projects/Config_Files
+2.  git clone https://github.com/vladstus/public-scripts.git ~/Projects/Config_Files/public-scripts
+3.  cd ~/Projects/Config_Files/public-scripts
+4.  run scripts in specified order
+5.  reboot
+
+### Reinstall zsh
+
+1.  sudo rm -r /usr/share/oh-my-zsh
+2.  sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+3.  omz reload
+
+### Install vimplug
+
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+
+### Reinstall telegram
+
+1. paru -R telegram-desktop
+2. download flatpak
+3. flatpak install <package>
+
+
+### Install Obsidian from app Image
+
+1.  Investigate autostart
+2.  More work on hotkeys
+3.  Need to fix bar somehow
+4.  Backup home folder and keep track on installed software
+5.  Need to copy all [[IntelliJ IDEA]] plugins from Ubuntu
+
+### Install Aura
+
+paru -S aura
+
+
+https://github.com/fosskers/aura
+
+### Configure play-with-mpv
+
+pip install wheel
+
+cd ~/developer/repos
+git clone https://github.com/Thann/play-with-mpv
+cd play-with-mpv
+pip install .
+
+### YT-DLP
+https://github.com/yt-dlp/yt-dlp#usage-and-options
+
+sudo curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp\nsudo chmod a+rx /usr/local/bin/yt-dlp\n
+paru -R youtube-dl
+sudo ln -s /usr/local/bin/yt-dlp /usr/bin/youtube-dl
+
+### Wally for keyboard
+
+paru -S zsa-wally
+
+### Configure backup to synology
+ssh-keygen
+ssh-copy-id -i backup backup@nas
+ 314  eval $(ssh-agent)
+  315  ssh-add ~/.ssh/backup
+  316  ssh-nas
+
+  ### Install xclilp
+
+  paru -S xclip
+
+
+  ### Other packages
+
+  paru -S tldr exa
+
+  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | zsh
+  nvm install 14.17.6
+  nvm install 14.17.6p
+  npm install -g @vue/cli
+
+  zsh < <(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)
+  source /home/gaazhag/.gvm/scripts/gvm
+
+  gvm install go1.16
+  gvm use go1.16 --default
+
+  paru -S mercurial
+  paru -S docker
+  npm install -g ganache-cli
+
+  sdk install java
+  sdk install scala
+  sdk install kotlin
+  sdk install groovy
+  sdk install maven
+  sdk install gradle
+
+  npm install -g ganache-cli
+
+  python3 -m pip install --user pipx
+  python3 -m pipx ensurepath
+  pipx install eth-brownie
+
+  paru -S nosqlbooster-mongodb
+  paru -S zathura sxiv
+  paru -S zathura-djvu
+  paru -S zathura-pdf-mupdf
+  paru -S ranger
+  paru -S thunderbird
+  paru -S gnomescreenshot
+  paru -S htmlq
+
+
+  ### Configure docker
+  568  systemctl start docker
+  570  sudo groupadd docker
+  571  sudo usermod -aG docker ${USER}
+
+    systemctl enable docker.service
+
+  ### Install docker compose
+
+  paru -S docker-compose
+
+  docker-postgres-start
+  docker-mongo
+
+  ### Installed java 11 for catalizator project
+  sdk install java 11.0.11.hs-adpt
+  paru -S 1password
+  paru -S htmlq
+
+  npm i -g git-user-switch
+  ### Enable ssh
+
+  sudo systemctl enable sshd
+
+  paru -S google-drive-ocamlfuse
+
+  google-drive-ocamlfuse ~/Google
+
+    887  paru -S nordvpn
+    888  sudo systemctl enable --now nordvpnd
+    889  sudo gpasswd -a gaazhag nordvpn
