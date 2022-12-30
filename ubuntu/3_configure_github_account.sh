@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+### TODO: well we don't have access to config files yet
 #eval "$(ssh-agent -s)"
 #ssh-add ~/.ssh/arco_vlad
 #
