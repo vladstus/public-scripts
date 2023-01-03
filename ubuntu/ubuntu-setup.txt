@@ -36,15 +36,6 @@ sudo apt-get -y install tldr exa
 ### Install Vue CLI
 npm install -g @vue/cli
 
-### GVM Installer
-zsh < <(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)
-source /home/gaazhag/.gvm/scripts/gvm
-
-sudo apt-get -y bison
-
-gvm install go1.19.4
-gvm use go1.19.4 --default
-
 ### JVMs configuration
 
 sdk install java
@@ -54,36 +45,30 @@ sdk install groovy
 sdk install maven
 sdk install gradle
 
+### TODO: Not working somehow
+### GVM Installer
+
+sudo apt-get -y install curl git mercurial make binutils bison gcc build-essential
+
+zsh < <(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)
+source /home/gaazhag/.gvm/scripts/gvm
+
+sudo apt-get -y bison
+
+gvm install go1.19.4
+gvm use go1.19.4 --default
+
 ### Configure docker
-sudo apt-get -y docker
+### TODO: Better watch Obsidian doc for docker
+sudo apt-get remove docker docker-engine docker.io containerd runc
 
-systemctl start docker
-sudo groupadd docker
-sudo usermod -aG docker ${USER}
-
-systemctl enable docker.service
 
 ### Install docker compose
 
-paru -S docker-compose
+sudo apt-get install docker-compose
 
 docker-postgres-start
 docker-mongo
 
 ### Installed java 11 for catalizator project
 sdk install java 11.0.11.hs-adpt
-paru -S 1password
-paru -S htmlq
-
-npm i -g git-user-switch
-### Enable ssh
-
-sudo systemctl enable sshd
-
-paru -S google-drive-ocamlfuse
-
-google-drive-ocamlfuse ~/Google
-
-887  paru -S nordvpn
-888  sudo systemctl enable --now nordvpnd
-889  sudo gpasswd -a gaazhag nordvpn
