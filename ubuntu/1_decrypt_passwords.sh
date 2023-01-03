@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-#yes | sudo pacman -S age
-
 sudo apt-get install age
 age --decrypt -o ~/Projects/Config_Files/public-scripts/ubuntu/.xignore ~/Projects/Config_Files/public-scripts/ubuntu/.xignore.bak
 cat ~/Projects/Config_Files/public-scripts/ubuntu/.xignore

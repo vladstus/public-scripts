@@ -1,0 +1,89 @@
+#### ARCOLINUX
+
+### Initial setup after install
+
+1.  mkdir -p ~/Projects/Config_Files
+2.  git clone https://github.com/vladstus/public-scripts.git ~/Projects/Config_Files/public-scripts
+3.  cd ~/Projects/Config_Files/public-scripts
+4.  run scripts in specified order
+5.  reboot
+
+### Reinstall zsh
+
+1.  sudo rm -r /usr/share/oh-my-zsh
+2.  sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+3.  omz reload
+
+### Install vimplug
+
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+
+### TODO: setup wally? not paru
+### Wally for keyboard
+
+paru -S zsa-wally
+
+
+### Other packages
+
+sudo apt-get -y install tldr exa
+
+###    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | zsh
+###    nvm install 14.17.6
+###    nvm install 14.17.6p
+
+### Install Vue CLI
+npm install -g @vue/cli
+
+### GVM Installer
+zsh < <(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)
+source /home/gaazhag/.gvm/scripts/gvm
+
+sudo apt-get -y bison
+
+gvm install go1.19.4
+gvm use go1.19.4 --default
+
+### JVMs configuration
+
+sdk install java
+sdk install scala
+sdk install kotlin
+sdk install groovy
+sdk install maven
+sdk install gradle
+
+### Configure docker
+sudo apt-get -y docker
+
+systemctl start docker
+sudo groupadd docker
+sudo usermod -aG docker ${USER}
+
+systemctl enable docker.service
+
+### Install docker compose
+
+paru -S docker-compose
+
+docker-postgres-start
+docker-mongo
+
+### Installed java 11 for catalizator project
+sdk install java 11.0.11.hs-adpt
+paru -S 1password
+paru -S htmlq
+
+npm i -g git-user-switch
+### Enable ssh
+
+sudo systemctl enable sshd
+
+paru -S google-drive-ocamlfuse
+
+google-drive-ocamlfuse ~/Google
+
+887  paru -S nordvpn
+888  sudo systemctl enable --now nordvpnd
+889  sudo gpasswd -a gaazhag nordvpn
