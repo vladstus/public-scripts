@@ -1,0 +1,13 @@
+apiVersion: traefik.io/v1alpha1
+kind: IngressRouteTCP
+metadata:
+  name: postgresql-ingress
+  namespace: default
+spec:
+  entryPoints:
+    - postgresql
+  routes:
+    - match: HostSNI(`*`)
+      services:
+        - name: polar-postgres
+          port: 5432
