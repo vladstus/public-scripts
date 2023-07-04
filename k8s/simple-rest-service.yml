@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: simple-rest-service
+  namespace: simple-rest-service
+  labels:
+    app: simple-rest-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: simple-rest-service
+  template:
+    metadata:
+      labels:
+        app: simple-rest-service
+    spec:
+      containers:
+        - name: simple-rest-service
+          image: gaazhag/simple-rest-service:2
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080

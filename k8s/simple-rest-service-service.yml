@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: simple-rest-service
+  name: simple-rest-service
+  labels:
+    app: simple-rest-service
+spec:
+  type: ClusterIP
+  selector:
+    app: simple-rest-service
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
