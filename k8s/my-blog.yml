@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-blog
+  namespace: my-blog
+  labels:
+    app: my-blog
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: my-blog
+  template:
+    metadata:
+      labels:
+        app: my-blog
+    spec:
+      containers:
+        - name: ghost
+          image: ghost:latest
+          ports:
+            - containerPort: 2368
