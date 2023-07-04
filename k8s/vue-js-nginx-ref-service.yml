@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: simple-rest-service
+  name: vuejs-nginx-ref
+  labels:
+    app: vuejs-nginx-ref
+spec:
+  type: ClusterIP
+  selector:
+    app: vuejs-nginx-ref
+  ports:
+    - protocol: TCP
+      port: 9001
+      targetPort: 9000

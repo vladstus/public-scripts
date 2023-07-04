@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vuejs-nginx-ref
+  namespace: simple-rest-service
+  labels:
+    app: vuejs-nginx-ref
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: vuejs-nginx-ref
+  template:
+    metadata:
+      labels:
+        app: vuejs-nginx-ref
+    spec:
+      containers:
+        - name: vuejs-nginx-ref
+          image: gaazhag/vue-js-nginx-ref:1
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 9000

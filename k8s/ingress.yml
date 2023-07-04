@@ -14,6 +14,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: simple-rest-service
+                name: vuejs-nginx-ref
                 port:
-                  number: 80
+                  number: 9001
